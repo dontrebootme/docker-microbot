@@ -1,0 +1,10 @@
+#!/bin/bash
+imagename="dontrebootme/microbot"
+if [ $# -eq 0 ];then
+ tagver="latest"
+else
+ tagver="${1}"
+fi
+echo "Now building: ${imagename}:${tagver}"
+docker build --rm=true --no-cache=true --pull=true -t ${imagename}:${tagver} .
+docker push ${imagename}:${tagver}
