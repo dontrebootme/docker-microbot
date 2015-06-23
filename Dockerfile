@@ -6,7 +6,7 @@ RUN apk-install nginx && echo "daemon off;" >> /etc/nginx/nginx.conf \
  && mkdir -p /tmp/nginx/client-body
 
 # Bring in the baymax
-COPY html /usr/html
+COPY html /usr/share/nginx/html/
 COPY start_nginx.sh /
 
 # Expose port 80
