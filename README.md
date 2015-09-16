@@ -2,10 +2,9 @@ docker-microbot
 ======================
 
 ## Purpose
-A 6.5MB Docker image running
-- [Alpine Linux](https://github.com/gliderlabs/docker-alpine)
-- [Nginx](http://nginx.org/)
-- Microbot image/unique html content
+A ~80KB Docker image running
+- [0xff/asmttpd](https://hub.docker.com/r/0xff/asmttpd/)
+- Microbot image
 
 Intended use is to demo docker orchestration
 - Docker
@@ -21,5 +20,5 @@ docker run -d -p "8080:80" dontrebootme/microbot
 
 ## Build
 ```
-➜ ./build
+➜ ./build $VERSION
 ```
