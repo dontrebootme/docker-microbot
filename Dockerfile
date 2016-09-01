@@ -1,8 +1,8 @@
-FROM 0xff/asmttpd
-MAINTAINER "Patrick O'Connor <patrick@dontreboot.me>"
+FROM nginx:alpine
 
-# Bring in the microbot image
-COPY html /var/www
+# Bring in the microbot
+COPY html /usr/share/nginx/html
+COPY start_nginx.sh /
 
-# Expose port 80
-EXPOSE 80
+# Run nginx
+CMD /start_nginx.sh

@@ -1,5 +1,5 @@
 #!/bin/bash
-imagename="dontrebootme/microbot"
+imagename="rothgar/microbot"
 if [ $# -eq 0 ];then
  tagver="latest"
 else
